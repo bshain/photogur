@@ -1,9 +1,7 @@
 Photogur2::Application.routes.draw do
     get 'pictures' => 'pictures#index'
 
-    get 'pictures/0' => 'pictures#picture0'
-    get 'pictures/1' => 'pictures#picture1'
-    get 'pictures/2' => 'pictures#picture2'
+    get 'pictures/:id' => 'pictures#show', as: "picture"
 end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -15,7 +13,7 @@ end
   #   get 'products/:id' => 'catalog#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purßchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
